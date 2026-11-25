@@ -1,0 +1,36 @@
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+.clang_complete
+.gcc-flags.json
+compile_commands.json
+
+# Arduino IDE / Arduino CLI
+build/
+*.ino.cpp
+*.elf
+*.bin
+*.hex
+*.map
+*.eep
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary & backup files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+*.log
