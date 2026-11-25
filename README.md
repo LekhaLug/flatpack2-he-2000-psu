@@ -43,28 +43,26 @@ Example after adding photos to images/:
 
 ## 🧰 Bill of Materials (BOM)
 
-> _A complete list of parts, wires, connectors, and hardware will be added later._
+> _Additional consumables (wires, power terminals, AC cord, fasteners, etc.) will be added later._
 
-Main components (based on the current firmware):
+Main components:
 - **Eltek Flatpack2 HE 2000W** (48V) power supply
 - **ESP32-C3 SuperMini** microcontroller
-- **CAN transceiver** module (e.g., TJA1050 / SN65HVD230 — _to be specified_)
-- **OLED display SH1106 128x64 (I2C)**
-- Rotary encoder & push buttons (`PSH`, `CON`, `BAK`)
-- Auxiliary power supply / DC-DC converter for logic power (_to be specified_)
+- **SN65HVD230 (VP230) CAN Bus Transceiver** module *(see warning below regarding counterfeit ICs)*
+- **1.3" SH1106 128x64 I2C OLED Display + EC11 Rotary Encoder & Buttons** combined module (`EGBO`)
+- **DC-DC Buck Converter (5–100V → 5V)** for powering the controller logic from the Flatpack2 output
 - Input/output terminals, power cord, fasteners (_to be specified_)
 
 ---
 
 ## 🛒 Module Links (AliExpress)
 
-> _Links to tested modules and parts will be added later._
-
-- ESP32-C3 SuperMini — _TBD_
-- CAN transceiver — _TBD_
-- OLED display SH1106 128x64 I2C — _TBD_
-- Rotary encoder / buttons — _TBD_
-- Power terminals / connectors — _TBD_
+| Module | Photo | Link & Notes |
+| :--- | :---: | :--- |
+| **ESP32-C3 SuperMini** | <img src="./images/modules/esp32_c3_supermini.jpg" width="160" alt="ESP32-C3 SuperMini"> | [AliExpress](https://www.aliexpress.com/item/1005009014269977.html) |
+| **SN65HVD230 CAN Bus Transceiver** | <img src="./images/modules/sn65hvd230_can.jpg" width="160" alt="SN65HVD230 CAN Transceiver"> | [AliExpress](https://www.aliexpress.com/item/1005008770382370.html)<br>⚠️ **Important:** This listing ships with a **counterfeit `VP230` IC** that may not work reliably. You will need to replace the chip with an original **TI SN65HVD230 (`VP230`)** or order a module with a genuine IC from another seller. |
+| **1.3" OLED Display + EC11 Rotary Encoder Module** | <img src="./images/modules/oled_ec11_module.jpg" width="160" alt="OLED + EC11 Module"> | [AliExpress](https://www.aliexpress.com/item/1005007584860095.html)<br>Select the **1.3" White OLED (SH1106)** variant. |
+| **DC-DC Buck Converter (5–100V to 5V)** | <img src="./images/modules/dc_dc_buck_5_100v.jpg" width="160" alt="DC-DC Buck Converter"> | [AliExpress](https://www.aliexpress.com/item/1005008604140432.html)<br>Select the **5V** output version to power the ESP32-C3 from the 44.5–57.6V output bus. |
 
 ---
 
