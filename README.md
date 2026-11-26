@@ -51,7 +51,10 @@ Main components:
 - **SN65HVD230 (VP230) CAN Bus Transceiver** module *(see warning below regarding counterfeit ICs)*
 - **1.3" SH1106 128x64 I2C OLED Display + EC11 Rotary Encoder & Buttons** combined module (`EGBO`)
 - **DC-DC Buck Converter (5–100V → 5V)** for powering the controller logic from the Flatpack2 output
-- Input/output terminals, power cord, fasteners (_to be specified_)
+- **PG9 Cable Gland** (nylon waterproof cable gland)
+- **XT-60 Connector** (DC output)
+- **3× M3 × 6 mm screws** — for mounting the OLED display module into the rear cover
+- Input/output terminals, power cord, additional fasteners (_to be specified_)
 
 ---
 
@@ -63,6 +66,7 @@ Main components:
 | **SN65HVD230 CAN Bus Transceiver** | <img src="./images/modules/sn65hvd230_can.jpg" width="160" alt="SN65HVD230 CAN Transceiver"> | [AliExpress](https://www.aliexpress.com/item/1005008770382370.html)<br>⚠️ **Important:** This listing ships with a **counterfeit `VP230` IC** that may not work reliably. You will need to replace the chip with an original **TI SN65HVD230 (`VP230`)** or order a module with a genuine IC from another seller. |
 | **1.3" OLED Display + EC11 Rotary Encoder Module** | <img src="./images/modules/oled_ec11_module.jpg" width="160" alt="OLED + EC11 Module"> | [AliExpress](https://www.aliexpress.com/item/1005007584860095.html)<br>Select the **1.3" White OLED (SH1106)** variant. |
 | **DC-DC Buck Converter (5–100V to 5V)** | <img src="./images/modules/dc_dc_buck_5_100v.jpg" width="160" alt="DC-DC Buck Converter"> | [AliExpress](https://www.aliexpress.com/item/1005008604140432.html)<br>Select the **5V** output version to power the ESP32-C3 from the 44.5–57.6V output bus. |
+| **PG9 Cable Gland** | <img src="./images/modules/pg9_cable_gland.jpg" width="160" alt="PG9 Cable Gland"> | [AliExpress](https://www.aliexpress.com/item/4001144039060.html)<br>Select the **PG9** size. |
 
 ---
 
@@ -93,13 +97,24 @@ Main components:
 
 ---
 
-## 🖨️ 3D Printing
+## 🖨️ 3D Printing & Assembly
 
 Printable files are located in [`3d_models/`](./3d_models/):
-- [`FP2_Case.stl`](./3d_models/FP2_Case.stl)
-- [`FP2_Button.stl`](./3d_models/FP2_Button.stl)
+- [`FP2_Case.stl`](./3d_models/FP2_Case.stl) — rear cover / enclosure
+- [`FP2_Button.stl`](./3d_models/FP2_Button.stl) — button cap
+
+- **Mounting hardware:** 3× **M3 × 6 mm** screws are required to mount the OLED display module into the rear cover.
 
 > _Recommended filament (PETG/ABS/ASA), infill, and print orientation notes will be added later._
+
+### Assembly Sequence
+
+1. Solder and test the circuit on the bench before installing it into the rear cover.
+2. Install the 3D-printed buttons (`FP2_Button.stl`) and the **PG9** cable gland into the rear cover (`FP2_Case.stl`).
+3. Mount the OLED display module into the rear cover using **3× M3 × 6 mm** screws.
+4. Install and secure the remaining modules inside the rear cover using hot glue or sealant.
+5. Route the wires and install the **XT-60** connector into the enclosure, then solder them to the terminal board.
+6. Snap the rear cover onto the Flatpack2 PSU using the built-in latches.
 
 ---
 
